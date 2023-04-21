@@ -30,10 +30,13 @@ public class User extends AuditableBase implements UserDetails {
     @Id
     @GeneratedValue
     private Long id;
-
+    private String name;
+    private String phone;
+    private String address;
     @Size(min = 4, max = 255, message = "Minimum username length: 4 characters")
     @Column(unique = true, nullable = false)
     private String email;
+
 
     @Size(min = 8, message = "Minimum password length: 8 characters")
     @Column(nullable = false)
@@ -76,4 +79,6 @@ public class User extends AuditableBase implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
 }
