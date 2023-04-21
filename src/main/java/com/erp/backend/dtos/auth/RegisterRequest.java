@@ -21,5 +21,8 @@ public class RegisterRequest {
   @NotNull(message = "Password is required")
   private String password;
 
-
+  private String name;
+  private String phone;
+  private String address;
+  
 }
