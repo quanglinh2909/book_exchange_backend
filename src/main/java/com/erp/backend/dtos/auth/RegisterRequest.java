@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Data
 @Builder
@@ -24,5 +25,5 @@ public class RegisterRequest {
   private String name;
   private String phone;
   private String address;
-  
+  private Date birthday;
 }
