@@ -3,6 +3,7 @@ package com.erp.backend.entities;
 
 import com.erp.backend.entities.base.AuditableBase;
 import com.erp.backend.enums.Role;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
@@ -13,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 
@@ -30,10 +32,15 @@ public class User extends AuditableBase implements UserDetails {
     @Id
     @GeneratedValue
     private Long id;
-
+    private String name;
+    private String phone;
+    private String address;
+    @JsonFormat(pattern="yyyy-MM-dd")
+    private Date birthday;
     @Size(min = 4, max = 255, message = "Minimum username length: 4 characters")
     @Column(unique = true, nullable = false)
     private String email;
+
 
     @Size(min = 8, message = "Minimum password length: 8 characters")
     @Column(nullable = false)
@@ -57,6 +64,8 @@ public class User extends AuditableBase implements UserDetails {
         return email;
     }
 
+
+
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -76,4 +85,6 @@ public class User extends AuditableBase implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
 }
