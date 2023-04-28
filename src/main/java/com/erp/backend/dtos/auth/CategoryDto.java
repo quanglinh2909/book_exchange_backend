@@ -1,21 +1,19 @@
 package com.erp.backend.dtos.auth;
 
-import com.erp.backend.entities.Author;
-import com.erp.backend.entities.Category;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
+import javax.validation.constraints.NotNull;
 @Data
 @Builder
 @AllArgsConstructor(staticName = "build")
 @NoArgsConstructor
-public class BookRequest {
-
+public class CategoryDto {
+    @NotNull(message = "Ten the loai khong duoc de trong")
     private String name;
-    private String describe;
-    private String img;
-    private String category;
-    private String author;
+    private String description;
 }

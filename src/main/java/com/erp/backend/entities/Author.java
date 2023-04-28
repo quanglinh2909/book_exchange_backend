@@ -21,6 +21,7 @@ import javax.validation.constraints.Size;
 @EqualsAndHashCode(callSuper = true)
 public class Author  extends AuditableBase {
     @Id
+    @GeneratedValue
     @Column(nullable = false)
     private Long author_id;
 
