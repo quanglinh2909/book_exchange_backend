@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49fcd393-ff98-40ce-b66d-4bee210702c8" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/CategoryController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/CategoryDto.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/CategoryServive.java" afterDir="false" />
@@ -18,9 +19,67 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/BookDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/ImageModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/controllers/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/controllers/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" afterDir="false" />
+>>>>>>> feature/hau_dev
+>>>>>>> dev
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" afterDir="false" />
+>>>>>>> dev
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/base/AuditableBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/base/AuditableBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/messages/ExceptionMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/messages/ExceptionMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/models/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/models/Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/repositories/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/repositories/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" afterDir="false" />
+=======
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" afterDir="false" />
+>>>>>>> feature/hau_dev
+>>>>>>> dev
+>>>>>>> dev
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +96,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2P0hbELCDB3db0DyBRWIkMB4rQx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -52,6 +115,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="D:/Spring/Dat_Tour" />
   </component>
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+<<<<<<< HEAD
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+=======
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/NGUYEN VAN HAU/Documents/GitHub/WorkflowManagementBackEnd_v2"
+>>>>>>> dev
+  }
+}]]></component>
+>>>>>>> dev
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\git\src\main\java\com\erp\backend\entities" />
@@ -100,6 +182,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

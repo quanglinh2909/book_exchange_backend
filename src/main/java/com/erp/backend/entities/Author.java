@@ -21,8 +21,13 @@ import javax.validation.constraints.Size;
 @EqualsAndHashCode(callSuper = true)
 public class Author  extends AuditableBase {
     @Id
+<<<<<<< HEAD
     @GeneratedValue
     @Column(nullable = false)
+=======
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+>>>>>>> dev
     private Long author_id;
 
     @Size(min = 10, max = 255)
@@ -43,5 +48,4 @@ public class Author  extends AuditableBase {
     public void setAuthor_id(Long author_id) {
         this.author_id = author_id;
     }
-
 }
