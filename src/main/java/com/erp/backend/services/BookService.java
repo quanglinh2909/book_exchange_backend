@@ -28,6 +28,7 @@ public class BookService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+<<<<<<< HEAD
 //    public Book uploadBook(BookRequest request
 //    ) throws IOException {
 //        //   String fileName = StringUtils.cleanPath(file.getOriginalFilename());
@@ -58,6 +59,13 @@ public class BookService {
 //        return savedBook;
 //    }
 
+=======
+    public Book uploadBook(BookRequest request
+                            ) throws IOException {
+     //   String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        Book book = new Book();
+        book.setName(request.getName());
+>>>>>>> dev
 
     public Book uploadNewBook(BookDto book) {
         Book book1 = new Book();

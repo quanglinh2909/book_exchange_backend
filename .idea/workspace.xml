@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49fcd393-ff98-40ce-b66d-4bee210702c8" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/BookDto.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/ImageModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -25,12 +26,25 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" afterDir="false" />
+>>>>>>> feature/hau_dev
+>>>>>>> dev
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category$CategoryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category$CategoryBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/base/AuditableBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/base/AuditableBase.class" afterDir="false" />
@@ -40,6 +54,15 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" afterDir="false" />
+=======
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" afterDir="false" />
+>>>>>>> feature/hau_dev
+>>>>>>> dev
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +79,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2P0hbELCDB3db0DyBRWIkMB4rQx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -63,6 +89,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -70,6 +97,11 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
+=======
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/NGUYEN VAN HAU/Documents/GitHub/WorkflowManagementBackEnd_v2"
+>>>>>>> dev
   }
 }]]></component>
   <component name="RecentsManager">
@@ -103,6 +135,7 @@
       <workItem from="1682599980323" duration="3562000" />
       <workItem from="1682605047717" duration="2640000" />
       <workItem from="1682644481278" duration="320000" />
+      <workItem from="1682662498316" duration="607000" />
     </task>
     <servers />
   </component>
