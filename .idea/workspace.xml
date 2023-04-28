@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49fcd393-ff98-40ce-b66d-4bee210702c8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category$CategoryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category$CategoryBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +75,7 @@
       <workItem from="1682599980323" duration="3562000" />
       <workItem from="1682605047717" duration="2640000" />
       <workItem from="1682644481278" duration="320000" />
+      <workItem from="1682662498316" duration="607000" />
     </task>
     <servers />
   </component>
