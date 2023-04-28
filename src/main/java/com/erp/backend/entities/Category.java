@@ -1,3 +1,4 @@
+
 package com.erp.backend.entities;
 
 import com.erp.backend.entities.base.AuditableBase;

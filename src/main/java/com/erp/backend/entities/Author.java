@@ -1,3 +1,4 @@
+
 package com.erp.backend.entities;
 
 import com.erp.backend.entities.base.AuditableBase;
@@ -18,10 +19,10 @@ import javax.validation.constraints.Size;
 @SQLDelete(sql = "UPDATE author SET isDeleted = true WHERE id = ?")
 @Where(clause = "is_deleted = false")
 @EqualsAndHashCode(callSuper = true)
-public class Author extends AuditableBase {
+public class Author  extends AuditableBase {
     @Id
     @Column(nullable = false)
-    private String author_id;
+    private Long author_id;
 
     @Size(min = 10, max = 255)
     @Column(nullable = false)
@@ -34,11 +35,12 @@ public class Author extends AuditableBase {
         this.name = name;
     }
 
-    public String getAuthor_id() {
+    public Long getAuthor_id() {
         return author_id;
     }
 
-    public void setAuthor_id(String author_id) {
+    public void setAuthor_id(Long author_id) {
         this.author_id = author_id;
     }
+
 }

@@ -1,13 +1,16 @@
+
 package com.erp.backend.entities;
 
-
 import com.erp.backend.entities.base.AuditableBase;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
-
+import javax.validation.constraints.Size;
 
 @Data
 @Builder
@@ -17,25 +20,22 @@ import javax.persistence.*;
 @Table(name = "book")
 @SQLDelete(sql = "UPDATE book SET isDeleted = true WHERE id = ?")
 @Where(clause = "is_deleted = false")
-@EqualsAndHashCode(callSuper = true)
 public class Book extends AuditableBase {
     @Id
     @GeneratedValue
     private Long id;
     @Column(name = "name", length = 255, nullable = false)
     private String name;
-    @Column(name = "describe", length = 255, nullable = false)
+    @Column(name = "describe1", length = 255, nullable = false)
     private String describe;
     @Column(name = "img", length = 255, nullable = false)
     private String img;
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "author_id")
     private Author author;
-
-
 
     public String getName() {
         return name;
@@ -84,4 +84,5 @@ public class Book extends AuditableBase {
     public void setId(Long id) {
         this.id = id;
     }
+
 }
