@@ -2,6 +2,7 @@ package com.erp.backend.services;
 
 
 import com.erp.backend.dtos.auth.BookRequest;
+import com.erp.backend.entities.Author;
 import com.erp.backend.entities.Book;
 import com.erp.backend.repositories.AuthorRepository;
 import com.erp.backend.repositories.BookRepository;
@@ -28,7 +29,6 @@ public class BookService {
     public Book uploadBook(BookRequest request
                             ) throws IOException {
      //   String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-
         Book book = new Book();
         book.setName(request.getName());
 
