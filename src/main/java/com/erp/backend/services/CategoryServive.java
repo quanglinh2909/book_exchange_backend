@@ -25,4 +25,9 @@ public class CategoryServive {
       return   saveCategory;
     }
     public List<Category> getCategory(){return categoryRepository.findAll();}
+
+    public Category getCategoryById(long id){
+        return categoryRepository.getCategoryById(id);
+    }
+
 }
