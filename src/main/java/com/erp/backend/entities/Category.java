@@ -20,16 +20,11 @@ import javax.persistence.*;
 @EqualsAndHashCode(callSuper = true)
 public class Category extends AuditableBase {
     @Id
-<<<<<<< HEAD
-    @GeneratedValue
-    @Column(nullable = false)
-=======
     @GeneratedValue(strategy = GenerationType.AUTO)
->>>>>>> dev
     private Long category_id;
     @Column(length = 255, nullable = false)
     private String name;
-    @Column(length = 255)
+    @Column(length = 255, nullable = false)
     private String description;
 
 
