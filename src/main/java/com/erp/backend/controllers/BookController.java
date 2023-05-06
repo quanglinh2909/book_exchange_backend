@@ -2,7 +2,6 @@ package com.erp.backend.controllers;
 
 import com.erp.backend.dtos.BookDto;
 import com.erp.backend.dtos.auth.BookRequest;
-import com.erp.backend.dtos.auth.RegisterRequest;
 import com.erp.backend.entities.Book;
 import com.erp.backend.entities.ImageModel;
 import com.erp.backend.repositories.AuthorRepository;
@@ -11,10 +10,7 @@ import com.erp.backend.repositories.CategoryRepository;
 import com.erp.backend.services.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 

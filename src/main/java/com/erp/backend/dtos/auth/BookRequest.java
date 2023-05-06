@@ -16,17 +16,12 @@ import java.util.Set;
 @NoArgsConstructor
 public class BookRequest {
 
-<<<<<<< HEAD
+
+
+
     private String name;
     private String describe;
     private String img;
     private String category;
     private String author;
-=======
-    private String bookName;
-    private String bookDescribe;
-    private Long category;
-    private Long author;
-    private Set<ImageModel> productImages;
->>>>>>> dev
 }
