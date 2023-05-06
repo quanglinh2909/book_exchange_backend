@@ -31,7 +31,11 @@ public class BookService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+<<<<<<< HEAD
     //<<<<<<< HEAD
+=======
+//<<<<<<< HEAD
+>>>>>>> 8c2fcc47fc3037cedb2aa38575b5590b725daf17
 ////<<<<<<< HEAD
 //=======
     @Transactional
@@ -73,6 +77,7 @@ public class BookService {
 //        return savedBook;
 //    }
 //<<<<<<< HEAD
+<<<<<<< HEAD
 
 //=======
 //    public Book uploadBook(BookRequest request
@@ -87,6 +92,22 @@ public class BookService {
 //    public Book uploadBook(BookRequest request) throws IOException {
         //   String fileName = StringUtils.cleanPath(file.getOriginalFilename());
 
+=======
+
+//=======
+//    public Book uploadBook(BookRequest request
+//                            ) throws IOException {
+//     //   String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+//        Book book = new Book();
+//        book.setName(request.getName());
+//>>>>>>> dev
+//=======
+//    }
+//
+//    public Book uploadBook(BookRequest request) throws IOException {
+     //   String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+
+>>>>>>> 8c2fcc47fc3037cedb2aa38575b5590b725daf17
         Book book = new Book();
         book.setAuthor(author);
         book.setCategory(category);

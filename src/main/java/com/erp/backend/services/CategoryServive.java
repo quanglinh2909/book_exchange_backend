@@ -16,18 +16,15 @@ public class CategoryServive {
     @Autowired
     private CategoryRepository categoryRepository;
 
-<<<<<<< HEAD
-    public Category createCategory (CategoryDto request){
-        if (request.getName() == null || request.getName().isBlank()) {
-            throw new ResourceNotFoundException("Tên thể loại không hợp lệ");
-        }
-=======
+
+
+
     public Category createCategory (@Valid CategoryDto request){
         if (request.getName() == null || request.getName().isBlank()) {
             throw new ResourceNotFoundException("Tên thể loại không hợp lệ");
         }
 
->>>>>>> dev
+
         Category category = Category.builder().name(request.getName()).description(request.getDescription()).build();
 
     //   var user = repository.findByEmail(request.getEmail())
@@ -36,4 +33,9 @@ public class CategoryServive {
       return   saveCategory;
     }
     public List<Category> getCategory(){return categoryRepository.findAll();}
+
+    public Category getCategoryById(long id){
+        return categoryRepository.getCategoryById(id);
+    }
+
 }

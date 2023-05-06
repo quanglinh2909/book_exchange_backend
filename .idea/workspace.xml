@@ -4,39 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5492897b-bd93-476e-b3a6-d4100cea2d05" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/SearchDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/AuthorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/BookDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/BookDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/CategoryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/AuthorRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/CategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/CategoryServive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/CategoryServive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/controllers/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/controllers/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/ApiResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/base/AuditableBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/base/AuditableBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/messages/ExceptionMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/messages/ExceptionMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/models/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/models/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/repositories/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/repositories/BookRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
