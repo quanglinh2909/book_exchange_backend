@@ -17,6 +17,9 @@ public class CategoryServive {
     private CategoryRepository categoryRepository;
 
     public Category createCategory (CategoryDto request){
+        if (request.getName() == null || request.getName().isBlank()) {
+            throw new ResourceNotFoundException("Tên thể loại không hợp lệ");
+        }
         Category category = Category.builder().name(request.getName()).description(request.getDescription()).build();
 
     //   var user = repository.findByEmail(request.getEmail())

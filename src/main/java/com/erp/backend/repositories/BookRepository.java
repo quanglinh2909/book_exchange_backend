@@ -5,13 +5,10 @@ import com.erp.backend.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-<<<<<<< HEAD
-import java.util.Optional;
+import java.util.List;
+
 
 public interface BookRepository extends JpaRepository<Book, Long> {
+    List<Book> findByBookNameContainingIgnoreCaseOrAuthorNameContainingIgnoreCase(String name, String author);
 
-
-=======
-public interface BookRepository extends CrudRepository<Book, Long> {
->>>>>>> dev
 }
