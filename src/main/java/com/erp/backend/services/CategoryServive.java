@@ -16,12 +16,9 @@ public class CategoryServive {
     @Autowired
     private CategoryRepository categoryRepository;
 
-
-
-
     public Category createCategory (@Valid CategoryDto request){
         if (request.getName() == null || request.getName().isBlank()) {
-            throw new ResourceNotFoundException("Tên thể loại không hợp lệ");
+            throw new ResourceNotFoundException("Tên thể loại không hợp lệ ");
         }
 
 

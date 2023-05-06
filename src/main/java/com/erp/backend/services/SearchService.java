@@ -19,7 +19,6 @@ public class SearchService {
 
 
     public List<Book> searchBooks(SearchDto keyword) {
-        
         return bookRepository.findByBookNameContainingIgnoreCaseOrAuthorNameContainingIgnoreCase(keyword.getKeyword(), keyword.getKeyword());
     }
 }
