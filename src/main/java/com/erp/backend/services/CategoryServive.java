@@ -1,14 +1,14 @@
 package com.erp.backend.services;
 
-import com.erp.backend.dtos.auth.BookRequest;
-
 import com.erp.backend.dtos.auth.CategoryDto;
 import com.erp.backend.entities.Category;
 import com.erp.backend.exceptions.ResourceNotFoundException;
 import com.erp.backend.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Service
@@ -16,10 +16,18 @@ public class CategoryServive {
     @Autowired
     private CategoryRepository categoryRepository;
 
+<<<<<<< HEAD
     public Category createCategory (CategoryDto request){
         if (request.getName() == null || request.getName().isBlank()) {
             throw new ResourceNotFoundException("Tên thể loại không hợp lệ");
         }
+=======
+    public Category createCategory (@Valid CategoryDto request){
+        if (request.getName() == null || request.getName().isBlank()) {
+            throw new ResourceNotFoundException("Tên thể loại không hợp lệ");
+        }
+
+>>>>>>> dev
         Category category = Category.builder().name(request.getName()).description(request.getDescription()).build();
 
     //   var user = repository.findByEmail(request.getEmail())

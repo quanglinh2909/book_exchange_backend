@@ -1,7 +1,5 @@
 package com.erp.backend.dtos;
 
-import com.erp.backend.entities.Author;
-import com.erp.backend.entities.Category;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;

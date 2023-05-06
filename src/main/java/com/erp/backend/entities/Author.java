@@ -22,9 +22,12 @@ import javax.validation.constraints.Size;
 public class Author  extends AuditableBase {
     @Id
 
+<<<<<<< HEAD
 
     @Column(nullable = false)
 
+=======
+>>>>>>> dev
 
     @GeneratedValue(strategy = GenerationType.AUTO)
 

@@ -17,12 +17,21 @@ import java.util.Set;
 public class BookRequest {
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> dev
     private String name;
     private String describe;
     private String img;
     private String category;
     private String author;
+<<<<<<< HEAD
 
 
 
 }
+=======
+}
+>>>>>>> dev
