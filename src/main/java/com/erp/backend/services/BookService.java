@@ -31,6 +31,9 @@ public class BookService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+//<<<<<<< HEAD
+////<<<<<<< HEAD
+//=======
     @Transactional
     public Book uploadBook(BookRequest request) throws IOException {
         //   String fileName = StringUtils.cleanPath(file.getOriginalFilename());
@@ -39,6 +42,7 @@ public class BookService {
         Category category = Category.builder().name(request.getCategory()).build();
         categoryRepository.save(category);
 
+//>>>>>>> 498aa6380298d0c5fc0dcdd04f4b7e83c8a27364
 //    public Book uploadBook(BookRequest request
 //    ) throws IOException {
 //        //   String fileName = StringUtils.cleanPath(file.getOriginalFilename());
@@ -68,6 +72,16 @@ public class BookService {
 //
 //        return savedBook;
 //    }
+//<<<<<<< HEAD
+
+//=======
+//    public Book uploadBook(BookRequest request
+//                            ) throws IOException {
+//     //   String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+//        Book book = new Book();
+//        book.setName(request.getName());
+//>>>>>>> dev
+//=======
 //    }
 //
 //    public Book uploadBook(BookRequest request) throws IOException {
@@ -99,6 +113,7 @@ public class BookService {
         return savedBook;
     }
 
+//>>>>>>> 498aa6380298d0c5fc0dcdd04f4b7e83c8a27364
 
     public Book uploadNewBook(BookDto book) {
         Book book1 = new Book();
@@ -110,7 +125,7 @@ public class BookService {
         book1.setBookName(book.getBookName());
         return bookRepository.save(book1);
     }
-    public List<Book> getAllBook() {
+    public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
     public Book getBookById(long id){

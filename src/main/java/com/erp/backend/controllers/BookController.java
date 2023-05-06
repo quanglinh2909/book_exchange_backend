@@ -75,16 +75,21 @@ public class BookController {
         }
         return imageModels;
     }
+
+    @GetMapping({"/getAllBooks"})
+    public List<Book> getAllBooks() {
+        return service.getAllBooks();
+    }
     @GetMapping("/book/{authorId}")
     public String viewBookByAuthor(ModelMap modelMap, @PathVariable("authorID") long authorID){
-        List<Book> books = service.getAllBook();
+        List<Book> books = service.getAllBooks();
         modelMap.put("books",books);
         modelMap.put("authors",service.getBookByAuthor(authorID));
         return "";
     }
     @GetMapping("/book/{categoryId}")
     public String viewBookByCategory(ModelMap modelMap, @PathVariable("categoryId") long categoryId){
-        List<Book> books = service.getAllBook();
+        List<Book> books = service.getAllBooks();
         modelMap.put("books",books);
         modelMap.put("category",service.getBookByCategory(categoryId));
         return "";
