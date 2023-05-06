@@ -6,6 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="49fcd393-ff98-40ce-b66d-4bee210702c8" name="Changes" comment="">
 <<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/CategoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/CategoryServive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/SearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" afterDir="false" />
+=======
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/BookDto.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/ImageModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -39,11 +54,12 @@
 >>>>>>> feature/hau_dev
 >>>>>>> dev
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" afterDir="false" />
+>>>>>>> dev
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category$CategoryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category$CategoryBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" afterDir="false" />
+=======
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" afterDir="false" />
@@ -62,6 +78,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" afterDir="false" />
 >>>>>>> feature/hau_dev
+>>>>>>> dev
 >>>>>>> dev
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +104,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Spring/Dat_Tour" />
+  </component>
+=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
 <<<<<<< HEAD
@@ -104,6 +133,7 @@
 >>>>>>> dev
   }
 }]]></component>
+>>>>>>> dev
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\git\src\main\java\com\erp\backend\entities" />
@@ -135,7 +165,7 @@
       <workItem from="1682599980323" duration="3562000" />
       <workItem from="1682605047717" duration="2640000" />
       <workItem from="1682644481278" duration="320000" />
-      <workItem from="1682662498316" duration="607000" />
+      <workItem from="1682662498316" duration="7945000" />
     </task>
     <servers />
   </component>

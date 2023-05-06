@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -72,6 +74,20 @@ public class BookController {
             imageModels.add(imageModel);
         }
         return imageModels;
+    }
+    @GetMapping("/book/{authorId}")
+    public String viewBookByAuthor(ModelMap modelMap, @PathVariable("authorID") long authorID){
+        List<Book> books = service.getAllBook();
+        modelMap.put("books",books);
+        modelMap.put("authors",service.getBookByAuthor(authorID));
+        return "";
+    }
+    @GetMapping("/book/{categoryId}")
+    public String viewBookByCategory(ModelMap modelMap, @PathVariable("categoryId") long categoryId){
+        List<Book> books = service.getAllBook();
+        modelMap.put("books",books);
+        modelMap.put("category",service.getBookByCategory(categoryId));
+        return "";
     }
 
 }
