@@ -2,6 +2,7 @@ package com.erp.backend.controllers;
 
 import com.erp.backend.dtos.BookDto;
 import com.erp.backend.dtos.auth.BookRequest;
+
 import com.erp.backend.entities.Book;
 import com.erp.backend.entities.ImageModel;
 import com.erp.backend.repositories.AuthorRepository;
@@ -11,12 +12,11 @@ import com.erp.backend.services.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-<<<<<<< HEAD
-=======
+
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
->>>>>>> 8c2fcc47fc3037cedb2aa38575b5590b725daf17
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
