@@ -4,30 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49fcd393-ff98-40ce-b66d-4bee210702c8" name="Changes" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest$RegisterRequestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/RegisterRequest.class" afterDir="false" />
->>>>>>> feature/hau_dev
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author$AuthorBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book$BookBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category$CategoryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category$CategoryBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/AuthenticationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erp/backend/services/UserService.class" afterDir="false" />
->>>>>>> feature/hau_dev
+    <list default="true" id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/SearchService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,38 +15,49 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
-  <component name="ProjectId" id="2P0hbELCDB3db0DyBRWIkMB4rQx" />
+  <component name="ProjectId" id="2PQcjnjJrTmAsZOpJXZ94gRWSJj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/NGUYEN VAN HAU/Documents/GitHub/WorkflowManagementBackEnd_v2"
-  }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\git\src\main\java\com\erp\backend\entities" />
-      <recent name="E:\git\src\main\java\com\erp\backend\repositories" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.erp.backend.controllers" />
-      <recent name="com.erp.backend.dtos.auth" />
-      <recent name="com.erp.backend.services" />
-    </key>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -82,15 +71,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="49fcd393-ff98-40ce-b66d-4bee210702c8" name="Changes" comment="" />
-      <created>1682599976982</created>
+      <changelist id="5492897b-bd93-476e-b3a6-d4100cea2d05" name="Changes" comment="" />
+      <created>1683391692478</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1682599976982</updated>
-      <workItem from="1682599980323" duration="3562000" />
-      <workItem from="1682605047717" duration="2640000" />
-      <workItem from="1682644481278" duration="320000" />
-      <workItem from="1682662498316" duration="607000" />
+      <updated>1683391692478</updated>
+      <workItem from="1683391700081" duration="1163000" />
+      <workItem from="1683392895907" duration="58000" />
+      <workItem from="1683392974519" duration="87000" />
+      <workItem from="1683393104500" duration="37000" />
+      <workItem from="1683393535907" duration="6203000" />
     </task>
     <servers />
   </component>
@@ -107,5 +97,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
