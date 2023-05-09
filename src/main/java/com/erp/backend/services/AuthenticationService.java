@@ -17,47 +17,51 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
-  private final UserRepository repository;
-  private final PasswordEncoder passwordEncoder;
-  private final JwtService jwtService;
-  private final AuthenticationManager authenticationManager;
+    private final UserRepository repository;
+    private final PasswordEncoder passwordEncoder;
+    private final JwtService jwtService;
+    private final AuthenticationManager authenticationManager;
 
-  public AuthenticationResponse register(RegisterRequest request) {
-    var user = User.builder()
-            .email(request.getEmail())
-            .password(passwordEncoder.encode(request.getPassword()))
-            .role(Role.USER)
-            .build();
-    var savedUser = repository.save(user);
-    var jwtToken = jwtService.generateToken(user);
-    return AuthenticationResponse.builder()
-            .token(jwtToken)
-            .build();
-  }
-
-  public AuthenticationResponse authenticate(AuthenticationRequest request) throws ResourceNotFoundException {
-    try {
-      authenticationManager.authenticate(
-              new UsernamePasswordAuthenticationToken(
-                      request.getEmail(),
-                      request.getPassword()
-              )
-      );
-    } catch (Exception e) {
-      throw new ResourceNotFoundException("Token not found");
+    public AuthenticationResponse register(RegisterRequest request) {
+        var user = User.builder()
+                .email(request.getEmail())
+                .password(passwordEncoder.encode(request.getPassword()))
+                .role(Role.USER)
+                .name(request.getName())
+                .phone(request.getPhone())
+                .address(request.getAddress())
+                .birthday((request.getBirthday()))
+                .build();
+        var savedUser = repository.save(user);
+        var jwtToken = jwtService.generateToken(user);
+        return AuthenticationResponse.builder()
+                .token(jwtToken)
+                .build();
     }
+
+    public AuthenticationResponse authenticate(AuthenticationRequest request) throws ResourceNotFoundException {
+        try {
+            authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(
+                            request.getEmail(),
+                            request.getPassword()
+                    )
+            );
+        } catch (Exception e) {
+            throw new ResourceNotFoundException("Token not found");
+        }
 //      var user = repository.findByEmail(request.getEmail())
 //              .orElseThrow(()-> new ResourceNotFoundException("User not found"));
-    // check getUser and is Active
-      var user = repository.findByEmail(request.getEmail())
-              .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+        // check getUser and is Active
+        var user = repository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
-      var jwtToken = jwtService.generateToken(user);
+        var jwtToken = jwtService.generateToken(user);
 
-      return AuthenticationResponse.builder()
-              .token(jwtToken)
-              .build();
-  }
+        return AuthenticationResponse.builder()
+                .token(jwtToken)
+                .build();
+    }
 
 }
 
