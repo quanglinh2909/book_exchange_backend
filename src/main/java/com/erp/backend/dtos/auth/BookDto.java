@@ -1,4 +1,4 @@
-package com.erp.backend.dtos;
+package com.erp.backend.dtos.auth;
 
 import lombok.Data;
 
