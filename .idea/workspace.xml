@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="" />
+    <list default="true" id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/book_exchange_backend-khang1" />
   </component>
   <component name="RunManager">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -79,7 +81,7 @@
       <workItem from="1683392974519" duration="87000" />
       <workItem from="1683393104500" duration="37000" />
       <workItem from="1683393535907" duration="6203000" />
-      <workItem from="1683822437643" duration="318000" />
+      <workItem from="1683822437643" duration="631000" />
     </task>
     <servers />
   </component>
