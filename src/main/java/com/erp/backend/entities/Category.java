@@ -21,10 +21,7 @@ import javax.persistence.*;
 public class Category extends AuditableBase {
     @Id
 
-<<<<<<< HEAD
 
-=======
->>>>>>> dev
     @Column(nullable = false)
 
     @GeneratedValue(strategy = GenerationType.AUTO)
