@@ -1,7 +1,7 @@
 package com.erp.backend.controllers;
 
-import com.erp.backend.dtos.BookDto;
-import com.erp.backend.dtos.auth.BookRequest;
+import com.erp.backend.dtos.BookDTO;
+import com.erp.backend.dtos.auth.BookDto;
 
 import com.erp.backend.entities.Book;
 import com.erp.backend.entities.ImageModel;
@@ -11,11 +11,10 @@ import com.erp.backend.repositories.CategoryRepository;
 import com.erp.backend.services.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
 import org.springframework.ui.ModelMap;
-import org.springframework.util.StringUtils;
-import org.springframework.validation.annotation.Validated;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -40,14 +39,10 @@ public class BookController {
     private CategoryRepository categoryRepository;
     @Autowired
     private BookService service;
-    @PostMapping("/books/upload")
-    public ResponseEntity<?> uploadBook(@RequestBody @Valid BookRequest request
-                                         ) throws IOException {
-       // Book savedBook = service.uploadBook(name,describe,img,id_author,id_category);
-
-//        return ResponseEntity.ok(service.uploadBook(request));
-      //  return ResponseEntity.ok(savedBook);
-        return null;
+    @PostMapping(value = "/books/create",consumes = {MediaType.MULTIPART_FORM_DATA_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<?> uploadBook( @RequestParam(value ="book") String jsonObject,
+                                         @RequestParam(value = "image",required = false) MultipartFile[] images){
+        return ResponseEntity.ok(service.uploadBook(jsonObject,images));
     }
 
     @PostMapping(value = {"/books/uploadNewBook"})
@@ -76,7 +71,10 @@ public class BookController {
         }
         return imageModels;
     }
-
+    @GetMapping({"books/getAll"})
+    public List<BookDTO> getAll() {
+        return service.getAll();
+    }
     @GetMapping({"/getAllBooks"})
     public List<Book> getAllBooks() {
         return service.getAllBooks();

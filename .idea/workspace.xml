@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/SearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/configs/SecurityConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/controllers/BookController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/repositories/BookRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

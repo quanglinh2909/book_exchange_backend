@@ -1,16 +1,9 @@
 package com.erp.backend.dtos;
 
-import lombok.Data;
+import com.erp.backend.entities.ImageModel;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-@Data
-public class BookDto {
-    @NotBlank(message = "Nhap ten sach")
-    private String bookName;
-    private String bookDescribe;
-    @NotNull(message = "Nhap danh muc")
-    private Long category;
-    @NotNull(message = "Nhap tac gia")
-    private Long author;
+import java.util.List;
+import java.util.Set;
+
+public record BookDTO(Long bookId, String bookName, String bookDescribe, String category, String author, Set<ImageModel> productImages) {
 }

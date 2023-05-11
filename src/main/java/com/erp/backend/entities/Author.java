@@ -27,6 +27,8 @@ public class Author  extends AuditableBase {
     @Size(min = 10, max = 255)
     @Column(nullable = false)
     private String name;
+
+    private String description;
     public String getName() {
         return name;
     }
