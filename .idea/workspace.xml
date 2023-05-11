@@ -4,85 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="" />
-=======
     <list default="true" id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/filters/ChainExceptionHandlerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/filters/ChainExceptionHandlerFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/filters/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/configs/filters/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/AuthorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/DemoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/SocketIOController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/SocketIOController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/AuthorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/AuthorDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/BookDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/CategoryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/AuthenticationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/AuthenticationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/BookRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/CategoryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/SearchDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/auth/SearchDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/mappers/AuthorDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/mappers/AuthorDtoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/mappers/BookDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/mappers/BookDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/mappers/CategoryDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/mappers/CategoryDtoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/mappers/UserDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/mappers/UserDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/request/AuthorRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/request/AuthorRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/request/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/request/BookRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/request/CategoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/dtos/request/CategoryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/ImageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/ImageModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/base/AuditableBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/entities/base/AuditableBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/enums/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/enums/TokenType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/enums/TokenType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/exceptions/AccessDeniedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/exceptions/AccessDeniedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/exceptions/ExitException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/exceptions/ExitException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/exceptions/advice/ApplicationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/exceptions/advice/ApplicationExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/messages/ExceptionMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/messages/ExceptionMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/messages/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/models/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/models/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/AuthorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/ImageModelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/ImageModelRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/AuthorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/CategoryServive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/CategoryServive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/LogoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/LogoutService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/socket_io/ServerCommandLineRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/socket_io/ServerCommandLineRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/socket_io/SocketHandleGlobal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/socket_io/SocketHandleGlobal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erp/backend/socket_io/SocketIOConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erp/backend/socket_io/SocketIOConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/erp/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/erp/backend/BackendApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/controllers/BookController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" beforeDir="false" />
     </list>
->>>>>>> dev
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,11 +23,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="khang1" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -134,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/book_exchange_backend-khang1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -148,7 +71,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="" />
+      <changelist id="5492897b-bd93-476e-b3a6-d4100cea2d05" name="Changes" comment="" />
       <created>1683391692478</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -158,17 +81,6 @@
       <workItem from="1683392974519" duration="87000" />
       <workItem from="1683393104500" duration="37000" />
       <workItem from="1683393535907" duration="6203000" />
-<<<<<<< HEAD
-      <workItem from="1683822437643" duration="1038000" />
-=======
-      <workItem from="1683440724519" duration="4758000" />
-      <workItem from="1683516113394" duration="5821000" />
-      <workItem from="1683522017008" duration="772000" />
-      <workItem from="1683730861690" duration="1601000" />
-      <workItem from="1683819285343" duration="1835000" />
-      <workItem from="1683821161032" duration="408000" />
-      <workItem from="1683821625216" duration="536000" />
->>>>>>> dev
     </task>
     <servers />
   </component>
