@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/configs/SecurityConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/controllers/BookController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest$BookRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/dtos/auth/BookRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/entities/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/repositories/BookRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erp/backend/services/BookService.class" beforeDir="false" />
-    </list>
+    <list default="true" id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +69,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5492897b-bd93-476e-b3a6-d4100cea2d05" name="Changes" comment="" />
+      <changelist id="f68e2392-633c-4427-a90a-e7cce7bf7fd1" name="Changes" comment="" />
       <created>1683391692478</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -88,6 +79,7 @@
       <workItem from="1683392974519" duration="87000" />
       <workItem from="1683393104500" duration="37000" />
       <workItem from="1683393535907" duration="6203000" />
+      <workItem from="1683822437643" duration="318000" />
     </task>
     <servers />
   </component>
