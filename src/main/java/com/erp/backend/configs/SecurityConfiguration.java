@@ -35,6 +35,7 @@ public class SecurityConfiguration {
                         "/api/author/**",
                         "/api/category/**",
                         "/api/books/**",
+                        "/api/users/**",
                         "/v2/api-docs",
                         "/webjars/**")
                 .permitAll()

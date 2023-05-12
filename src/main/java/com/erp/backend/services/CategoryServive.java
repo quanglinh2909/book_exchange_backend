@@ -3,10 +3,12 @@ package com.erp.backend.services;
 import com.erp.backend.dtos.CategoryDto;
 import com.erp.backend.dtos.mappers.CategoryDtoMapper;
 import com.erp.backend.dtos.request.CategoryRequest;
+import com.erp.backend.dtos.request.UpdateCategoryRequest;
 import com.erp.backend.entities.Author;
 import com.erp.backend.entities.Category;
 import com.erp.backend.exceptions.ExitException;
 import com.erp.backend.exceptions.ResourceNotFoundException;
+import com.erp.backend.models.Response;
 import com.erp.backend.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,6 +38,20 @@ public class CategoryServive {
                 .build();
         Category save=categoryRepository.save(category);
         return mapper.apply(save);
+    }
+    public CategoryDto updateCategory (UpdateCategoryRequest request){
+        Optional<Category> optionalCategory=categoryRepository.findById(request.getId());
+        Category category=optionalCategory.get();
+        category.setDescription(request.getDescription());
+        category.setName(request.getName());
+        Category save=categoryRepository.save(category);
+        return mapper.apply(save);
+    }
+    public Response deleteCategory (Long idCategory){
+        Optional<Category> optionalCategory=categoryRepository.findById(idCategory);
+        Category category=optionalCategory.get();
+        categoryRepository.delete(category);
+        return new Response(200,null,null);
     }
     public List<Category> getCategory(){return categoryRepository.findAll();}
 

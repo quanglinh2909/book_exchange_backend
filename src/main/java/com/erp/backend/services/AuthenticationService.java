@@ -6,6 +6,7 @@ import com.erp.backend.dtos.auth.AuthenticationResponse;
 import com.erp.backend.dtos.auth.RegisterRequest;
 import com.erp.backend.entities.User;
 import com.erp.backend.enums.Role;
+import com.erp.backend.enums.Status;
 import com.erp.backend.exceptions.ResourceNotFoundException;
 import com.erp.backend.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -31,6 +32,7 @@ public class AuthenticationService {
                 .phone(request.getPhone())
                 .address(request.getAddress())
                 .birthday((request.getBirthday()))
+                .status(Status.NOMAL)
                 .build();
         var savedUser = repository.save(user);
         var jwtToken = jwtService.generateToken(user);
