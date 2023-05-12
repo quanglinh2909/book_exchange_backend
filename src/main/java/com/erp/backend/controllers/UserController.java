@@ -22,5 +22,9 @@ public class UserController {
     public ResponseEntity<?> getProfile(@RequestAttribute("email") String user) {
         return ResponseEntity.ok(userService.getProfile(user));
     }
+    @GetMapping("/getAll")
+    public ResponseEntity<?> getAll(){
+        return ResponseEntity.ok(userService.getAll());
+    }
 
 }

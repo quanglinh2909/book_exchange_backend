@@ -15,12 +15,11 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "category")
-@SQLDelete(sql = "UPDATE category SET isDeleted = true WHERE id = ?")
+@SQLDelete(sql = "UPDATE category SET is_deleted = true WHERE category_id = ?")
 @Where(clause = "is_deleted = false")
 @EqualsAndHashCode(callSuper = true)
 public class Category extends AuditableBase {
     @Id
-
 
     @Column(nullable = false)
 
