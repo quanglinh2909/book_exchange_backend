@@ -16,23 +16,18 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @Entity
 @Table(name = "author")
-@SQLDelete(sql = "UPDATE author SET isDeleted = true WHERE id = ?")
+@SQLDelete(sql = "UPDATE author SET is_deleted = true WHERE author_id = ?")
 @Where(clause = "is_deleted = false")
 @EqualsAndHashCode(callSuper = true)
 public class Author  extends AuditableBase {
     @Id
-<<<<<<< HEAD
-    @GeneratedValue
     @Column(nullable = false)
-=======
-
     @GeneratedValue(strategy = GenerationType.AUTO)
->>>>>>> dev
     private Long author_id;
-
-    @Size(min = 10, max = 255)
     @Column(nullable = false)
     private String name;
+
+    private String description;
     public String getName() {
         return name;
     }

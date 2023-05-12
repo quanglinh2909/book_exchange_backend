@@ -1,4 +1,3 @@
-
 package com.erp.backend.entities;
 
 import com.erp.backend.entities.base.AuditableBase;
@@ -18,7 +17,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "book")
-@SQLDelete(sql = "UPDATE book SET isDeleted = true WHERE id = ?")
+@SQLDelete(sql = "UPDATE book SET is_deleted = true WHERE bookId = ?")
 @Where(clause = "is_deleted = false")
 public class Book extends AuditableBase {
     @Id
@@ -32,9 +31,9 @@ public class Book extends AuditableBase {
 //    @JoinColumn(name = "category_id")
 //    private Category category;
 //
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Category category;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Author author;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -47,6 +46,8 @@ public class Book extends AuditableBase {
             }
     )
     private Set<ImageModel> productImages;
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    private User userCreate;
 
     public Set<ImageModel> getProductImages() {
         return productImages;
