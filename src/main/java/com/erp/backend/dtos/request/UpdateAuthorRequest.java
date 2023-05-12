@@ -5,18 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotNull;
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookRequest {
+public class UpdateAuthorRequest {
+    private Long id;
+    @NotNull(message = "name is require")
     private String name;
     private String description;
-<<<<<<< HEAD
-    private Long idAuthor;
-=======
-    private String authorName;
-    private Long idUserCreate;
->>>>>>> 395a5e0ecade2da5532c3470fdc2b8df126d5f70
-    private Long idCategory;
 }
