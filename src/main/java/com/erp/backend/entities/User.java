@@ -3,6 +3,7 @@ package com.erp.backend.entities;
 
 import com.erp.backend.entities.base.AuditableBase;
 import com.erp.backend.enums.Role;
+import com.erp.backend.enums.Status;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
@@ -48,6 +49,8 @@ public class User extends AuditableBase implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
