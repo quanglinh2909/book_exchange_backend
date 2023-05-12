@@ -3,8 +3,11 @@ package com.erp.backend.services;
 import com.erp.backend.dtos.AuthorDto;
 import com.erp.backend.dtos.mappers.AuthorDtoMapper;
 import com.erp.backend.dtos.request.AuthorRequest;
+import com.erp.backend.dtos.request.UpdateAuthorRequest;
 import com.erp.backend.entities.Author;
+import com.erp.backend.entities.Category;
 import com.erp.backend.exceptions.ExitException;
+import com.erp.backend.models.Response;
 import com.erp.backend.repositories.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,16 +31,26 @@ public class AuthorService {
     }
     public AuthorDto createAuthor(AuthorRequest request){
 
-        Optional<Author> optionalAuthor=authorRepository.findByName(request.getName());
-        if(optionalAuthor.isPresent()){
-            throw new ExitException(HttpStatus.BAD_REQUEST,"Author is exits");
-        }
         Author author=Author.builder()
                             .name(request.getName())
                             .description(request.getDescription())
                             .build();
         Author save=authorRepository.save(author);
         return mapper.apply(save);
+    }
+    public AuthorDto updateAuthor(UpdateAuthorRequest request){
+        Optional<Author> optionalAuthor=authorRepository.findById(request.getId());
+        Author author=optionalAuthor.get();
+        author.setName(request.getName());
+        author.setDescription(request.getDescription());
+        Author save=authorRepository.save(author);
+        return mapper.apply(save);
+    }
+    public Response deleteAuthor (Long idAuthor){
+        Optional<Author> optionalAuthor=authorRepository.findById(idAuthor);
+        Author author=optionalAuthor.get();
+        authorRepository.delete(author);
+        return new Response(200,null,null);
     }
     public List<AuthorDto> getAll(){
         List<Author> list=authorRepository.findAll();
