@@ -27,10 +27,13 @@ public class SearchController {
 
     private SearchService service;
 
-    @PostMapping("/search")
-    public ResponseEntity<List<Book>> searchBooks(@Valid SearchDto  keyword) {
+    @PostMapping("search")
+    public ResponseEntity<List<Book>> searchBooks(@Valid @RequestBody SearchDto  keyword) {
         List<Book> books = service.searchBooks(keyword);
-
         return ResponseEntity.ok(books);
+    }
+    @PostMapping("searchs")
+    public ResponseEntity<List<Book>> searchBook(@RequestBody SearchDto  keyword) {
+        return ResponseEntity.ok( service.searchBook(keyword));
     }
 }

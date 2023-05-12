@@ -6,6 +6,7 @@ import com.erp.backend.dtos.auth.BookDto;
 import com.erp.backend.dtos.mappers.BookDTOMapper;
 import com.erp.backend.dtos.request.BookRequest;
 import com.erp.backend.dtos.request.UpdateBookRequest;
+import com.erp.backend.dtos.resonse.HomeBook;
 import com.erp.backend.entities.*;
 import com.erp.backend.models.Response;
 import com.erp.backend.repositories.*;
@@ -16,10 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -148,6 +146,13 @@ public class BookService {
         book1.setBookName(book.getBookName());
         return bookRepository.save(book1);
     }
+//    public void getAllHomeBook(){
+//        List<HomeBook> topRecent=new ArrayList<>();
+//        List<Book> list=bookRepository.findTopRecent();
+//        System.out.println(list);
+//
+//    }
+
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
