@@ -1,6 +1,7 @@
 package com.erp.backend.controllers;
 
 import com.erp.backend.dtos.BookDTO;
+import com.erp.backend.dtos.HomeCateGoryBookDto;
 import com.erp.backend.dtos.auth.BookDto;
 
 import com.erp.backend.entities.Book;
@@ -23,6 +24,7 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 @RestController
@@ -93,5 +95,22 @@ public class BookController {
         modelMap.put("category",service.getBookByCategory(categoryId));
         return "";
     }
-
+    @GetMapping("/topbook")
+    public List<Book> viewTopBook(ModelMap modelMap){
+        List<Book> lstBook = service.topBook();
+        modelMap.put("books",lstBook);
+        return lstBook;
+    }
+    @GetMapping("/topbookCategory")
+    public List<HomeCateGoryBookDto> viewTopBookByNameCategory(ModelMap modelMap){
+        List<HomeCateGoryBookDto> lstBook = service.topBookByNameCategory();
+        modelMap.put("books",lstBook);
+        return lstBook;
+    }
+    @GetMapping("/topBookAuthor")
+    public List<Book> viewTopBookAuthor(ModelMap modelMap){
+        List<Book> lstBook = service.topBookAuthor();
+        modelMap.put("books",lstBook);
+        return lstBook;
+    }
 }
