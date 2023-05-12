@@ -38,43 +38,44 @@ public class BookService {
     private UserRepository userRepository;
     @Autowired
     BookDTOMapper dtoMapper;
-    public List<BookDTO> getAll(){
-        List<Book> list=bookRepository.findAll();
-        List<BookDTO> listResult=list.stream().map(dtoMapper::apply).collect(Collectors.toList());
+
+    public List<BookDTO> getAll() {
+        List<Book> list = bookRepository.findAll();
+        List<BookDTO> listResult = list.stream().map(dtoMapper::apply).collect(Collectors.toList());
         return listResult;
     }
-    public BookDTO uploadBook(String jsonObject, MultipartFile[] images){
-        ObjectMapper mapper=new ObjectMapper();
+
+    public BookDTO uploadBook(String jsonObject, MultipartFile[] images) {
+        ObjectMapper mapper = new ObjectMapper();
         try {
-            BookRequest request=mapper.readValue(jsonObject,BookRequest.class);
-            Category category=categoryRepository.findById(request.getIdCategory()).get();
-            Optional<Author> optionalAuthor=authorRepository.findByName(request.getAuthorName());
+            BookRequest request = mapper.readValue(jsonObject, BookRequest.class);
+            Category category = categoryRepository.findById(request.getIdCategory()).get();
+            Optional<Author> optionalAuthor = authorRepository.findByName(request.getAuthorName());
             Author author;
-            if(!optionalAuthor.isPresent()){
-                author=Author.builder().name(request.getAuthorName())
+            if (!optionalAuthor.isPresent()) {
+                author = Author.builder().name(request.getAuthorName())
                         .build();
-                author=authorRepository.save(author);
+                author = authorRepository.save(author);
+            } else {
+                author = optionalAuthor.get();
             }
-            else{
-                author=optionalAuthor.get();
-            }
-            Set<ImageModel> listImage=new HashSet<>();
-            for(MultipartFile image:images){
+            Set<ImageModel> listImage = new HashSet<>();
+            for (MultipartFile image : images) {
                 try {
-                    ImageModel imageModel=ImageModel.builder()
+                    ImageModel imageModel = ImageModel.builder()
                             .name(image.getOriginalFilename())
                             .type(image.getContentType())
                             .picByte(image.getBytes())
                             .build();
 
-                    ImageModel saveImage=imageRepository.save(imageModel);
+                    ImageModel saveImage = imageRepository.save(imageModel);
                     listImage.add(saveImage);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             }
-            User user=userRepository.findById(request.getIdUserCreate()).get();
-            Book book=Book.builder()
+            User user = userRepository.findById(request.getIdUserCreate()).get();
+            Book book = Book.builder()
                     .bookDescribe(request.getDescription())
                     .bookName(request.getName())
                     .category(category)
@@ -89,32 +90,32 @@ public class BookService {
         }
 
     }
-    public BookDTO updateBook(String jsonObject, MultipartFile[] images){
-        ObjectMapper mapper=new ObjectMapper();
+
+    public BookDTO updateBook(String jsonObject, MultipartFile[] images) {
+        ObjectMapper mapper = new ObjectMapper();
         try {
-            UpdateBookRequest request=mapper.readValue(jsonObject,UpdateBookRequest.class);
-            Book book=bookRepository.findById(request.getId()).get();
-            Category category=categoryRepository.findById(request.getIdCategory()).get();
-            Optional<Author> optionalAuthor=authorRepository.findByName(request.getAuthorName());
+            UpdateBookRequest request = mapper.readValue(jsonObject, UpdateBookRequest.class);
+            Book book = bookRepository.findById(request.getId()).get();
+            Category category = categoryRepository.findById(request.getIdCategory()).get();
+            Optional<Author> optionalAuthor = authorRepository.findByName(request.getAuthorName());
             Author author;
-            if(!optionalAuthor.isPresent()){
-                author=Author.builder().name(request.getAuthorName())
+            if (!optionalAuthor.isPresent()) {
+                author = Author.builder().name(request.getAuthorName())
                         .build();
-                author=authorRepository.save(author);
+                author = authorRepository.save(author);
+            } else {
+                author = optionalAuthor.get();
             }
-            else{
-                author=optionalAuthor.get();
-            }
-            Set<ImageModel> listImage=new HashSet<>();
-            for(MultipartFile image:images){
+            Set<ImageModel> listImage = new HashSet<>();
+            for (MultipartFile image : images) {
                 try {
-                    ImageModel imageModel=ImageModel.builder()
+                    ImageModel imageModel = ImageModel.builder()
                             .name(image.getOriginalFilename())
                             .type(image.getContentType())
                             .picByte(image.getBytes())
                             .build();
 
-                    ImageModel saveImage=imageRepository.save(imageModel);
+                    ImageModel saveImage = imageRepository.save(imageModel);
                     listImage.add(saveImage);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
@@ -132,12 +133,14 @@ public class BookService {
         }
 
     }
-    public Response deleteBook (Long idBook){
-        Optional<Book> optionalBook=bookRepository.findById(idBook);
-        Book book=optionalBook.get();
+
+    public Response deleteBook(Long idBook) {
+        Optional<Book> optionalBook = bookRepository.findById(idBook);
+        Book book = optionalBook.get();
         bookRepository.delete(book);
-        return new Response(200,null,null);
+        return new Response(200, null, null);
     }
+
     public Book uploadNewBook(BookDto book) {
         Book book1 = new Book();
         Author author = authorRepository.findById(book.getAuthor()).get();
@@ -148,16 +151,20 @@ public class BookService {
         book1.setBookName(book.getBookName());
         return bookRepository.save(book1);
     }
+
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
-    public Book getBookById(long id){
+
+    public Book getBookById(long id) {
         return bookRepository.getBookById(id);
     }
-    public List<Book> getBookByAuthor(long id){
+
+    public List<Book> getBookByAuthor(long id) {
         return bookRepository.getBookByAuthor(id);
     }
-    public List<Book> getBookByCategory(long id){
+
+    public List<Book> getBookByCategory(long id) {
         return bookRepository.getBookByCategory(id);
     }
 
