@@ -2,6 +2,7 @@ package com.erp.backend.services;
 
 
 import com.erp.backend.dtos.BookDTO;
+import com.erp.backend.dtos.HomeCateGoryBookDto;
 import com.erp.backend.dtos.auth.BookDto;
 import com.erp.backend.dtos.mappers.BookDTOMapper;
 import com.erp.backend.dtos.request.BookRequest;
@@ -16,10 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -160,5 +158,20 @@ public class BookService {
     public List<Book> getBookByCategory(long id){
         return bookRepository.getBookByCategory(id);
     }
+    public List<Book> topBook(){
+        return bookRepository.topBook();
+    }
+    public List<Book> topBookAuthor(){
+        return bookRepository.topBookAuthor();
+    }
+    public  List<HomeCateGoryBookDto> topBookByNameCategory(){
+        List<Category> list =categoryRepository.findAll();
+        List<HomeCateGoryBookDto> result = new ArrayList<>();
+        for (Category c: list) {
+            List<Book> bookList= bookRepository.getBookByCategory(c.getCategory_id());
 
+            result.add(new HomeCateGoryBookDto(c.getName(),bookList));
+        }
+        return result;
+    }
 }
