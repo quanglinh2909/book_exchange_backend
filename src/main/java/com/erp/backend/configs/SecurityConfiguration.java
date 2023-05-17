@@ -32,6 +32,10 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests()
                 .antMatchers("/api/signup/**","/api/login/**","/api/verification/**", "/swagger-ui/**","/swagger-resources/**",
                         "/swagger-ui.html",
+                        "/api/author/**",
+                        "/api/category/**",
+                        "/api/books/**",
+                        "/api/users/**",
                         "/v2/api-docs",
                         "/webjars/**")
                 .permitAll()

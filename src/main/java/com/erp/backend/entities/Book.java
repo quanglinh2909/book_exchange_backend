@@ -1,4 +1,3 @@
-
 package com.erp.backend.entities;
 
 import com.erp.backend.entities.base.AuditableBase;
@@ -10,7 +9,7 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
+import java.util.Set;
 
 @Data
 @Builder
@@ -18,55 +17,68 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @Entity
 @Table(name = "book")
-@SQLDelete(sql = "UPDATE book SET isDeleted = true WHERE id = ?")
+@SQLDelete(sql = "UPDATE book SET is_deleted = true WHERE bookId = ?")
 @Where(clause = "is_deleted = false")
 public class Book extends AuditableBase {
     @Id
-    @GeneratedValue
-    private Long id;
-    @Column(name = "name", length = 255, nullable = false)
-    private String name;
-    @Column(name = "describe1", length = 255, nullable = false)
-    private String describe;
-    @Column(name = "img", length = 255, nullable = false)
-    private String img;
-    @ManyToOne
-    @JoinColumn(name = "category_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long bookId;
+    private String bookName;
+    private String bookDescribe;
+    //    @Column(name = "img", length = 255, nullable = false)
+//    private String img;
+//    @ManyToOne
+//    @JoinColumn(name = "category_id")
+//    private Category category;
+//
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Category category;
-    @OneToOne
-    @JoinColumn(name = "author_id")
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Author author;
 
-    public String getName() {
-        return name;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "book_images",
+            joinColumns = {
+                    @JoinColumn(name = "book_id")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "image_id")
+            }
+    )
+    private Set<ImageModel> productImages;
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    private User userCreate;
+
+    public Set<ImageModel> getProductImages() {
+        return productImages;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductImages(Set<ImageModel> productImages) {
+        this.productImages = productImages;
     }
 
-    public String getDescribe() {
-        return describe;
+    public Long getBookId() {
+        return bookId;
     }
 
-    public void setDescribe(String describe) {
-        this.describe = describe;
+    public void setBookId(Long bookId) {
+        this.bookId = bookId;
     }
 
-    public String getImg() {
-        return img;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public Category getCategory() {
-        return category;
+    public String getBookDescribe() {
+        return bookDescribe;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setBookDescribe(String bookDescribe) {
+        this.bookDescribe = bookDescribe;
     }
 
     public Author getAuthor() {
@@ -77,12 +89,36 @@ public class Book extends AuditableBase {
         this.author = author;
     }
 
-    public Long getId() {
-        return id;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setCategory(Category category) {
+        this.category = category;
     }
+//    public String getImg() {
+//        return img;
+//    }
+//
+//    public void setImg(String img) {
+//        this.img = img;
+//    }
+//
+//    public Category getCategory() {
+//        return category;
+//    }
+//
+//    public void setCategory(Category category) {
+//        this.category = category;
+//    }
+//
+//    public Author getAuthor() {
+//        return author;
+//    }
+//
+//    public void setAuthor(Author author) {
+//        this.author = author;
+//    }
+
 
 }
