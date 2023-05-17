@@ -88,6 +88,10 @@ public class BookController {
         modelMap.put("authors",service.getBookByAuthor(authorID));
         return "";
     }
+    @GetMapping("/book/get/{idBook}")
+    public ResponseEntity<?> getBook(@PathVariable("idBook") Long idBook){
+        return ResponseEntity.ok(service.getBook(idBook));
+    }
     @GetMapping("/book/{categoryId}")
     public String viewBookByCategory(ModelMap modelMap, @PathVariable("categoryId") long categoryId){
         List<Book> books = service.getAllBooks();

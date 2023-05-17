@@ -7,6 +7,7 @@ import com.erp.backend.dtos.auth.BookDto;
 import com.erp.backend.dtos.mappers.BookDTOMapper;
 import com.erp.backend.dtos.request.BookRequest;
 import com.erp.backend.dtos.request.UpdateBookRequest;
+import com.erp.backend.dtos.resonse.HomeBook;
 import com.erp.backend.entities.*;
 import com.erp.backend.models.Response;
 import com.erp.backend.repositories.*;
@@ -136,6 +137,10 @@ public class BookService {
         bookRepository.delete(book);
         return new Response(200,null,null);
     }
+    public  BookDTO getBook(Long idBook){
+        Book book=bookRepository.findById(idBook).get();
+        return dtoMapper.apply(book);
+    }
     public Book uploadNewBook(BookDto book) {
         Book book1 = new Book();
         Author author = authorRepository.findById(book.getAuthor()).get();
@@ -146,6 +151,13 @@ public class BookService {
         book1.setBookName(book.getBookName());
         return bookRepository.save(book1);
     }
+//    public void getAllHomeBook(){
+//        List<HomeBook> topRecent=new ArrayList<>();
+//        List<Book> list=bookRepository.findTopRecent();
+//        System.out.println(list);
+//
+//    }
+
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
