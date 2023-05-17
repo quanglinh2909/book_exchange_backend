@@ -51,7 +51,8 @@ public class User extends AuditableBase implements UserDetails {
     private Role role;
     @Enumerated(EnumType.STRING)
     private Status status;
-
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Book> follows;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));

@@ -137,6 +137,10 @@ public class BookService {
         bookRepository.delete(book);
         return new Response(200,null,null);
     }
+    public  BookDTO getBook(Long idBook){
+        Book book=bookRepository.findById(idBook).get();
+        return dtoMapper.apply(book);
+    }
     public Book uploadNewBook(BookDto book) {
         Book book1 = new Book();
         Author author = authorRepository.findById(book.getAuthor()).get();

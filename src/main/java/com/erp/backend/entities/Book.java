@@ -24,6 +24,7 @@ public class Book extends AuditableBase {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long bookId;
     private String bookName;
+    @Column(length = 10000)
     private String bookDescribe;
     //    @Column(name = "img", length = 255, nullable = false)
 //    private String img;

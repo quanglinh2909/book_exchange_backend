@@ -28,7 +28,7 @@ public class Category extends AuditableBase {
     private Long category_id;
     @Column(length = 255, nullable = false)
     private String name;
-    @Column(length = 255)
+    @Column(length = 5000)
     private String description;
 
 
