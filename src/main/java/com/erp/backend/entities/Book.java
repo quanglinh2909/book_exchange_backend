@@ -47,6 +47,8 @@ public class Book extends AuditableBase {
             }
     )
     private Set<ImageModel> productImages;
+    @OneToMany
+    private Set<Comment> listComment;
     @ManyToOne(cascade = CascadeType.REMOVE)
     private User userCreate;
 

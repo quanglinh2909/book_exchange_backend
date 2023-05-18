@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CommentRequest {
-    private String content;
+public class NotificationRequest {
     private Long idBook;
 }
