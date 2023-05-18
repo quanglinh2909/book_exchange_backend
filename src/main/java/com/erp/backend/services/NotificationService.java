@@ -9,6 +9,7 @@ import com.erp.backend.models.Response;
 import com.erp.backend.repositories.BookRepository;
 import com.erp.backend.repositories.NotificationRepository;
 import com.erp.backend.repositories.UserRepository;
+import com.erp.backend.socket_io.SocketHandleGlobal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,6 +24,8 @@ public class NotificationService {
     BookRepository bookRepository;
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    SocketHandleGlobal socket;
     @Transactional
     public Notification createNotification(String email,NotificationRequest request){
         Book book=bookRepository.findById(request.getIdBook()).get();
@@ -35,8 +38,8 @@ public class NotificationService {
                 .isRead(ReadStatus.NOTREAD)
                 .build();
 
-
         Notification saveNotify=notificationRepository.save(notification);
+        socket.sendEvent(userTarget.getId(),"notification",saveNotify);
         return saveNotify;
     }
     public List<Notification> getAll(Long idUser){

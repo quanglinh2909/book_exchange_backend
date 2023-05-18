@@ -24,7 +24,7 @@ public class Comment extends AuditableBase {
     private Long id;
     @Column(nullable = false)
     private String content;
-    @ManyToOne(cascade = CascadeType.REMOVE)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private User userCreate;
 
