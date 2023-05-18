@@ -14,11 +14,8 @@ public class CommentController {
     @Autowired
     CommentService service;
     @PostMapping(value = {"/comment/create"})
-    public ResponseEntity<?> createComment(@RequestBody CommentRequest request){
-        return  ResponseEntity.ok(service.createComment(request));
+    public ResponseEntity<?> createComment(@RequestAttribute("email") String email,@RequestBody CommentRequest request){
+        return  ResponseEntity.ok(service.createComment(email,request));
     }
-    @GetMapping(value = {"/comment/{idBook}"})
-    public ResponseEntity<?> getListComment(@PathVariable Long idBook){
-        return ResponseEntity.ok(service.getListComment(idBook));
-    }
+
 }

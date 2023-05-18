@@ -15,6 +15,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -39,6 +40,11 @@ public class BookService {
     BookDTOMapper dtoMapper;
     public List<BookDTO> getAll(){
         List<Book> list=bookRepository.findAll();
+        List<BookDTO> listResult=list.stream().map(dtoMapper::apply).collect(Collectors.toList());
+        return listResult;
+    }
+    public List<BookDTO> getAllOfUser(Long idUser){
+        List<Book> list=bookRepository.getBookByUser(idUser);
         List<BookDTO> listResult=list.stream().map(dtoMapper::apply).collect(Collectors.toList());
         return listResult;
     }
@@ -137,6 +143,22 @@ public class BookService {
         bookRepository.delete(book);
         return new Response(200,null,null);
     }
+    @Transactional
+    public Book favorite(String email,Long idBook){
+        User user=userRepository.findByEmail(email).get();
+        Book book=bookRepository.findById(idBook).get();
+        user.getFollows().add(book);
+        userRepository.save(user);
+        return book;
+    }
+    @Transactional
+    public Book unfavorite(String email,Long idBook){
+        User user=userRepository.findByEmail(email).get();
+        Book book=bookRepository.findById(idBook).get();
+        user.getFollows().remove(book);
+        userRepository.save(user);
+        return book;
+    }
     public  BookDTO getBook(Long idBook){
         Book book=bookRepository.findById(idBook).get();
         return dtoMapper.apply(book);
@@ -177,12 +199,21 @@ public class BookService {
         return bookRepository.topBookAuthor();
     }
     public  List<HomeCateGoryBookDto> topBookByNameCategory(){
-        List<Category> list =categoryRepository.findAll();
+        List<Category> list =categoryRepository.findAllByOrderByNameAsc();
         List<HomeCateGoryBookDto> result = new ArrayList<>();
         for (Category c: list) {
             List<Book> bookList= bookRepository.getBookByCategory(c.getCategory_id());
 
             result.add(new HomeCateGoryBookDto(c.getName(),bookList));
+        }
+        return result;
+    }
+    public  List<HomeCateGoryBookDto> topBookByNameAuthor(){
+        List<Author> list =authorRepository.findAllByOrderByNameAsc();
+        List<HomeCateGoryBookDto> result = new ArrayList<>();
+        for (Author a: list) {
+            List<Book> bookList= bookRepository.getBookByAuthor(a.getAuthor_id());
+            result.add(new HomeCateGoryBookDto(a.getName(),bookList));
         }
         return result;
     }

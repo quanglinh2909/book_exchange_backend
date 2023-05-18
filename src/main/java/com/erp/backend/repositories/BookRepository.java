@@ -18,6 +18,8 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     public Book getBookById(long id);
     @Query("select  b from Book  b where b.category.category_id = ?1")
     public List<Book> getBookByCategory(long id);
+    @Query("select  b from Book  b where b.userCreate.id = ?1")
+    public List<Book> getBookByUser(long idUser);
     @Query("select  b from Book  b where b.author.author_id = ?1 ")
     public List<Book> getBookByAuthor(long id);
     @Modifying

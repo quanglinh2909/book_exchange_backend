@@ -49,15 +49,6 @@ public class BookController {
 
     @PostMapping(value = {"/books/uploadNewBook"})
     public Book addNewBook(@RequestBody @Valid  BookDto book) {
-
-//        try {
-//            Set<ImageModel> images = uploadImage(file);
-//            book.setProductImages(images);
-//            return service.uploadNewBook(book);
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//            return null;
-//        }
         return service.uploadNewBook(book);
     }
 
@@ -73,9 +64,17 @@ public class BookController {
         }
         return imageModels;
     }
+    @DeleteMapping("books/delete/{idBook}")
+    public ResponseEntity<?> deleteBook(@PathVariable(value = "idBook") Long idBook){
+        return ResponseEntity.ok(service.deleteBook(idBook));
+    }
     @GetMapping({"books/getAll"})
     public List<BookDTO> getAll() {
         return service.getAll();
+    }
+    @GetMapping({"books/getAll/{idUser}"})
+    public List<BookDTO> getAllBookOfUser(@PathVariable(value = "idUser") Long idUser) {
+        return service.getAllOfUser(idUser);
     }
     @GetMapping({"/getAllBooks"})
     public List<Book> getAllBooks() {
@@ -87,6 +86,14 @@ public class BookController {
         modelMap.put("books",books);
         modelMap.put("authors",service.getBookByAuthor(authorID));
         return "";
+    }
+    @PutMapping({"/book/favorite/{idBook}"})
+    public ResponseEntity<?> favorite(@RequestAttribute("email") String email,@PathVariable(value = "idBook") Long idBook){
+        return ResponseEntity.ok(service.favorite(email,idBook));
+    }
+    @PutMapping({"/book/unfavorite/{idBook}"})
+    public ResponseEntity<?> unfavorite(@RequestAttribute("email") String email,@PathVariable(value = "idBook") Long idBook){
+        return ResponseEntity.ok(service.unfavorite(email,idBook));
     }
     @GetMapping("/book/get/{idBook}")
     public ResponseEntity<?> getBook(@PathVariable("idBook") Long idBook){
@@ -112,9 +119,8 @@ public class BookController {
         return lstBook;
     }
     @GetMapping("/topBookAuthor")
-    public List<Book> viewTopBookAuthor(ModelMap modelMap){
-        List<Book> lstBook = service.topBookAuthor();
-        modelMap.put("books",lstBook);
-        return lstBook;
+    public ResponseEntity<?> viewTopBookAuthor(){
+        List<HomeCateGoryBookDto> lstBook = service.topBookByNameAuthor();
+        return ResponseEntity.ok(lstBook);
     }
 }

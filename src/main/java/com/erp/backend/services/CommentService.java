@@ -9,6 +9,7 @@ import com.erp.backend.repositories.CommentRepository;
 import com.erp.backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -20,18 +21,17 @@ public class CommentService {
     private UserRepository userRepository;
     @Autowired
     private BookRepository bookRepository;
-    public List<Comment> getListComment(Long idBook){
-        return commentRepository.getListComment(idBook);
 
-    }
-    public Comment createComment(CommentRequest request){
-        User user=userRepository.findById(request.getIdUser()).get();
+    @Transactional
+    public Comment createComment(String email,CommentRequest request){
+        User user=userRepository.findByEmail(email).get();
         Book book=bookRepository.findById(request.getIdBook()).get();
         Comment comment=Comment.builder().content(request.getContent())
                 .userCreate(user)
-                .book(book)
                 .build();
         Comment saveComment=commentRepository.save(comment);
+        book.getListComment().add(comment);
+        bookRepository.save(book);
         return saveComment;
     }
 }
