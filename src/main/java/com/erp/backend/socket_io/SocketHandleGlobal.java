@@ -8,54 +8,54 @@ import com.corundumstudio.socketio.listener.DataListener;
 import com.corundumstudio.socketio.listener.DisconnectListener;
 import com.erp.backend.services.UserService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 
 @RequiredArgsConstructor
 @Component
 
 public class SocketHandleGlobal {
-    private final SocketIONamespace namespace;
+    private static final Logger log = LoggerFactory.getLogger(SocketHandleGlobal.class);
 
-    private final UserService userService;
-    private SocketIOServer server;
+    private  SocketIONamespace namespace;
 
     @Autowired
-    public SocketHandleGlobal(SocketIOServer server, UserService userService) {
+    public SocketHandleGlobal(SocketIOServer server) {
         // muốn nhận tất cả thì server.addNamespace("")
         this.namespace = server.addNamespace("/chat");
-        this.userService = userService;
-        this.server = server;
         this.namespace.addConnectListener(onConnected());
         this.namespace.addDisconnectListener(onDisconnected());
-//        this.namespace.addEventListener("chat", ChatMessage.class, onChatReceived());
-        //onevent join
-        this.namespace.addEventListener("join", Long.class, onJoin());
-
+        this.namespace.addEventListener("join", String.class, onJoin());
     }
 
-    private DataListener<Long> onJoin() {
+    public void sendEvent(Long roomId, String event, Object data) {
+        this.namespace.getRoomOperations(String.valueOf(roomId)).sendEvent(event, data);
+    }
+
+    private DataListener<String> onJoin() {
         return (client, data, ackSender) -> {
-            System.out.println("onJoin: " + data);
+            System.out.println("Client[{}] - Joined chat module");
+            //join room
+            client.joinRoom(data);
+//            this.namespace.getRoomOperations(data).sendEvent("message", "Hello " + data);
         };
     }
 
 
     private ConnectListener onConnected() {
         return client -> {
+            System.out.println("Client[{}] - Connected to chat module through '{}'");
             HandshakeData handshakeData = client.getHandshakeData();
-            String id = client.getSessionId().toString();
-            System.out.println("userConnect: " + id);
-            client.sendEvent("connect", id);
         };
     }
 
     private DisconnectListener onDisconnected() {
         return client -> {
-            String id = client.getSessionId().toString();
-
-            System.out.println("onDisconnected: " + id);
-//            log.debug("Client[{}] - Disconnected from chat module.", client.getSessionId().toString());
+            System.out.println("Client[{}] - Disconnected from chat module.");
         };
     }
+
 }
