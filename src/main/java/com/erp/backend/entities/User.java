@@ -53,17 +53,8 @@ public class User extends AuditableBase implements UserDetails {
     private Role role;
     @Enumerated(EnumType.STRING)
     private Status status;
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "user_follows",
-            joinColumns = {
-                    @JoinColumn(name = "user_id")
-            },
-            inverseJoinColumns = {
-                    @JoinColumn(name = "book_id")
-            }
-    )
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Set<Book> follows;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    private List<Book> follows;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));

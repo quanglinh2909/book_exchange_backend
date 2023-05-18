@@ -43,8 +43,8 @@ public class BookController {
     private BookService service;
     @PostMapping(value = "/books/create",consumes = {MediaType.MULTIPART_FORM_DATA_VALUE, MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<?> uploadBook( @RequestParam(value ="book") String jsonObject,
-                                         @RequestParam(value = "image",required = false) MultipartFile[] images){
-        return ResponseEntity.ok(service.uploadBook(jsonObject,images));
+                                         @RequestParam(value = "image",required = false) MultipartFile image){
+        return ResponseEntity.ok(service.uploadBook(jsonObject,image));
     }
 
     @PostMapping(value = {"/books/uploadNewBook"})

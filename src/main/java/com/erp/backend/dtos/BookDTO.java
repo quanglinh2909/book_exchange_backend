@@ -8,6 +8,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
-public record BookDTO(Long bookId, String bookName, String bookDescribe, String category, String author, Set<ImageModel> productImages,
+public record BookDTO(Long bookId, String bookName, String bookDescribe, String category, String author,String image,
                       User userCreate, LocalDateTime createdAt,Set<Comment> listComment) {
 }

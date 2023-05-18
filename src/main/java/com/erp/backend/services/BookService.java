@@ -37,6 +37,8 @@ public class BookService {
     @Autowired
     private UserRepository userRepository;
     @Autowired
+    private UploadService uploadService;
+    @Autowired
     BookDTOMapper dtoMapper;
     public List<BookDTO> getAll(){
         List<Book> list=bookRepository.findAll();
@@ -48,7 +50,7 @@ public class BookService {
         List<BookDTO> listResult=list.stream().map(dtoMapper::apply).collect(Collectors.toList());
         return listResult;
     }
-    public BookDTO uploadBook(String jsonObject, MultipartFile[] images){
+    public BookDTO uploadBook(String jsonObject, MultipartFile image){
         ObjectMapper mapper=new ObjectMapper();
         try {
             BookRequest request=mapper.readValue(jsonObject,BookRequest.class);
@@ -63,28 +65,20 @@ public class BookService {
             else{
                 author=optionalAuthor.get();
             }
-            Set<ImageModel> listImage=new HashSet<>();
-            for(MultipartFile image:images){
-                try {
-                    ImageModel imageModel=ImageModel.builder()
-                            .name(image.getOriginalFilename())
-                            .type(image.getContentType())
-                            .picByte(image.getBytes())
-                            .build();
 
-                    ImageModel saveImage=imageRepository.save(imageModel);
-                    listImage.add(saveImage);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
             User user=userRepository.findById(request.getIdUserCreate()).get();
+            String url;
+            try {
+               url =uploadService.uploadFile(image,"upload");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             Book book=Book.builder()
                     .bookDescribe(request.getDescription())
                     .bookName(request.getName())
                     .category(category)
                     .author(author)
-                    .productImages(listImage)
+                    .image(url)
                     .userCreate(user)
                     .build();
             bookRepository.save(book);
@@ -94,49 +88,49 @@ public class BookService {
         }
 
     }
-    public BookDTO updateBook(String jsonObject, MultipartFile[] images){
-        ObjectMapper mapper=new ObjectMapper();
-        try {
-            UpdateBookRequest request=mapper.readValue(jsonObject,UpdateBookRequest.class);
-            Book book=bookRepository.findById(request.getId()).get();
-            Category category=categoryRepository.findById(request.getIdCategory()).get();
-            Optional<Author> optionalAuthor=authorRepository.findByName(request.getAuthorName());
-            Author author;
-            if(!optionalAuthor.isPresent()){
-                author=Author.builder().name(request.getAuthorName())
-                        .build();
-                author=authorRepository.save(author);
-            }
-            else{
-                author=optionalAuthor.get();
-            }
-            Set<ImageModel> listImage=new HashSet<>();
-            for(MultipartFile image:images){
-                try {
-                    ImageModel imageModel=ImageModel.builder()
-                            .name(image.getOriginalFilename())
-                            .type(image.getContentType())
-                            .picByte(image.getBytes())
-                            .build();
-
-                    ImageModel saveImage=imageRepository.save(imageModel);
-                    listImage.add(saveImage);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-            book.setBookDescribe(request.getDescription());
-            book.setBookName(request.getName());
-            book.setAuthor(author);
-            book.setCategory(category);
-            book.setProductImages(listImage);
-            bookRepository.save(book);
-            return dtoMapper.apply(book);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
+//    public BookDTO updateBook(String jsonObject, MultipartFile[] images){
+//        ObjectMapper mapper=new ObjectMapper();
+//        try {
+//            UpdateBookRequest request=mapper.readValue(jsonObject,UpdateBookRequest.class);
+//            Book book=bookRepository.findById(request.getId()).get();
+//            Category category=categoryRepository.findById(request.getIdCategory()).get();
+//            Optional<Author> optionalAuthor=authorRepository.findByName(request.getAuthorName());
+//            Author author;
+//            if(!optionalAuthor.isPresent()){
+//                author=Author.builder().name(request.getAuthorName())
+//                        .build();
+//                author=authorRepository.save(author);
+//            }
+//            else{
+//                author=optionalAuthor.get();
+//            }
+//            Set<ImageModel> listImage=new HashSet<>();
+//            for(MultipartFile image:images){
+//                try {
+//                    ImageModel imageModel=ImageModel.builder()
+//                            .name(image.getOriginalFilename())
+//                            .type(image.getContentType())
+//                            .picByte(image.getBytes())
+//                            .build();
+//
+//                    ImageModel saveImage=imageRepository.save(imageModel);
+//                    listImage.add(saveImage);
+//                } catch (IOException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
+//            book.setBookDescribe(request.getDescription());
+//            book.setBookName(request.getName());
+//            book.setAuthor(author);
+//            book.setCategory(category);
+//            book.setProductImages(listImage);
+//            bookRepository.save(book);
+//            return dtoMapper.apply(book);
+//        } catch (JsonProcessingException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//    }
     public Response deleteBook (Long idBook){
         Optional<Book> optionalBook=bookRepository.findById(idBook);
         Book book=optionalBook.get();
@@ -146,9 +140,13 @@ public class BookService {
     @Transactional
     public Book favorite(String email,Long idBook){
         User user=userRepository.findByEmail(email).get();
+        System.out.println("1");
         Book book=bookRepository.findById(idBook).get();
+        System.out.println("2");
         user.getFollows().add(book);
+        System.out.println("3");
         userRepository.save(user);
+        System.out.println("4");
         return book;
     }
     @Transactional
