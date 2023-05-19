@@ -17,5 +17,4 @@ public class CommentController {
     public ResponseEntity<?> createComment(@RequestAttribute("email") String email,@RequestBody CommentRequest request){
         return  ResponseEntity.ok(service.createComment(email,request));
     }
-
 }
