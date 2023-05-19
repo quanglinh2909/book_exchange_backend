@@ -41,12 +41,12 @@ public class ApplicationConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
-    @Bean
-    @Primary
-    public ObjectMapper objectMapper() {
-        System.out.println("ok cofig");
-        return new ObjectMapper().findAndRegisterModules().disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-    }
+//    @Bean
+//    @Primary
+//    public ObjectMapper objectMapper() {
+//        System.out.println("ok cofig");
+//        return new ObjectMapper().findAndRegisterModules().disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {

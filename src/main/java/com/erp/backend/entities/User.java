@@ -6,6 +6,8 @@ import com.erp.backend.enums.Role;
 import com.erp.backend.enums.Status;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
@@ -43,8 +45,6 @@ public class User extends AuditableBase implements UserDetails {
     @Size(min = 4, max = 255, message = "Minimum username length: 4 characters")
     @Column(unique = true, nullable = false)
     private String email;
-
-
     @Size(min = 8, message = "Minimum password length: 8 characters")
     @Column(nullable = false)
     private String password;
@@ -53,7 +53,8 @@ public class User extends AuditableBase implements UserDetails {
     private Role role;
     @Enumerated(EnumType.STRING)
     private Status status;
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @ManyToMany(cascade = CascadeType.REMOVE)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<Book> follows;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

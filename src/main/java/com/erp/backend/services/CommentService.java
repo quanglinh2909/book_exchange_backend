@@ -7,6 +7,7 @@ import com.erp.backend.entities.User;
 import com.erp.backend.repositories.BookRepository;
 import com.erp.backend.repositories.CommentRepository;
 import com.erp.backend.repositories.UserRepository;
+import com.erp.backend.socket_io.SocketHandleGlobal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,7 +22,8 @@ public class CommentService {
     private UserRepository userRepository;
     @Autowired
     private BookRepository bookRepository;
-
+    @Autowired
+    SocketHandleGlobal socket;
     @Transactional
     public Comment createComment(String email,CommentRequest request){
         User user=userRepository.findByEmail(email).get();
@@ -32,6 +34,10 @@ public class CommentService {
         Comment saveComment=commentRepository.save(comment);
         book.getListComment().add(comment);
         bookRepository.save(book);
+        List<User> listClient=userRepository.findAll();
+        for(User client:listClient){
+            socket.sendEvent(client.getId(),"comment",saveComment);
+        }
         return saveComment;
     }
 }
