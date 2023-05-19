@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class BookRequest {
     private String name;
     private String description;
+    private Long idAuthor;
     private String authorName;
     private Long idUserCreate;
     private Long idCategory;

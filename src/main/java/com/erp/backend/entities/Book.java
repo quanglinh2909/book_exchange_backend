@@ -24,6 +24,7 @@ public class Book extends AuditableBase {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long bookId;
     private String bookName;
+    @Column(length = 10000)
     private String bookDescribe;
     //    @Column(name = "img", length = 255, nullable = false)
 //    private String img;
@@ -36,89 +37,11 @@ public class Book extends AuditableBase {
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Author author;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "book_images",
-            joinColumns = {
-                    @JoinColumn(name = "book_id")
-            },
-            inverseJoinColumns = {
-                    @JoinColumn(name = "image_id")
-            }
-    )
-    private Set<ImageModel> productImages;
-    @ManyToOne(cascade = CascadeType.REMOVE)
+    private String image;
+    @OneToMany(fetch = FetchType.LAZY)
+    private Set<Comment> listComment;
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
     private User userCreate;
-
-    public Set<ImageModel> getProductImages() {
-        return productImages;
-    }
-
-    public void setProductImages(Set<ImageModel> productImages) {
-        this.productImages = productImages;
-    }
-
-    public Long getBookId() {
-        return bookId;
-    }
-
-    public void setBookId(Long bookId) {
-        this.bookId = bookId;
-    }
-
-    public String getBookName() {
-        return bookName;
-    }
-
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
-    }
-
-    public String getBookDescribe() {
-        return bookDescribe;
-    }
-
-    public void setBookDescribe(String bookDescribe) {
-        this.bookDescribe = bookDescribe;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-//    public String getImg() {
-//        return img;
-//    }
-//
-//    public void setImg(String img) {
-//        this.img = img;
-//    }
-//
-//    public Category getCategory() {
-//        return category;
-//    }
-//
-//    public void setCategory(Category category) {
-//        this.category = category;
-//    }
-//
-//    public Author getAuthor() {
-//        return author;
-//    }
-//
-//    public void setAuthor(Author author) {
-//        this.author = author;
-//    }
 
 
 }
