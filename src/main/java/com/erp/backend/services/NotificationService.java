@@ -45,10 +45,9 @@ public class NotificationService {
     public List<Notification> getAll(Long idUser){
         return notificationRepository.getAll(idUser);
     }
-    public Response read(Long idNotify){
+    public Notification read(Long idNotify){
         Notification notification=notificationRepository.findById(idNotify).get();
         notification.setIsRead(ReadStatus.READ);
-        notificationRepository.save(notification);
-        return new Response(200,null,null);
+        return notificationRepository.save(notification);
     }
 }
