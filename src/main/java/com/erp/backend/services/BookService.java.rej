@@ -1,0 +1,68 @@
+diff a/src/main/java/com/erp/backend/services/BookService.java b/src/main/java/com/erp/backend/services/BookService.java	(rejected hunks)
+@@ -38,13 +38,11 @@
+     private UserRepository userRepository;
+     @Autowired
+     BookDTOMapper dtoMapper;
+-
+     public List<BookDTO> getAll() {
+         List<Book> list = bookRepository.findAll();
+         List<BookDTO> listResult = list.stream().map(dtoMapper::apply).collect(Collectors.toList());
+         return listResult;
+     }
+-
+     public BookDTO uploadBook(String jsonObject, MultipartFile[] images) {
+         ObjectMapper mapper = new ObjectMapper();
+         try {
+@@ -90,7 +89,6 @@
+         }
+ 
+     }
+-
+     public BookDTO updateBook(String jsonObject, MultipartFile[] images) {
+         ObjectMapper mapper = new ObjectMapper();
+         try {
+@@ -103,7 +101,8 @@
+                 author = Author.builder().name(request.getAuthorName())
+                         .build();
+                 author = authorRepository.save(author);
+-            } else {
++            }
++            else {
+                 author = optionalAuthor.get();
+             }
+             Set<ImageModel> listImage = new HashSet<>();
+@@ -133,14 +132,12 @@
+         }
+ 
+     }
+-
+     public Response deleteBook(Long idBook) {
+         Optional<Book> optionalBook = bookRepository.findById(idBook);
+         Book book = optionalBook.get();
+         bookRepository.delete(book);
+         return new Response(200, null, null);
+     }
+-
+     public Book uploadNewBook(BookDto book) {
+         Book book1 = new Book();
+         Author author = authorRepository.findById(book.getAuthor()).get();
+@@ -151,19 +148,15 @@
+         book1.setBookName(book.getBookName());
+         return bookRepository.save(book1);
+     }
+-
+     public List<Book> getAllBooks() {
+         return bookRepository.findAll();
+     }
+-
+     public Book getBookById(long id) {
+         return bookRepository.getBookById(id);
+     }
+-
+     public List<Book> getBookByAuthor(long id) {
+         return bookRepository.getBookByAuthor(id);
+     }
+-
+     public List<Book> getBookByCategory(long id) {
+         return bookRepository.getBookByCategory(id);
+     }

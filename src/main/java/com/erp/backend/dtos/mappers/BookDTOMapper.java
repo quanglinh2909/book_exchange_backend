@@ -11,6 +11,6 @@ public class BookDTOMapper implements Function<Book, BookDTO> {
 
     @Override
     public BookDTO apply(Book book) {
-        return new BookDTO(book.getBookId(), book.getBookName(), book.getBookDescribe(),book.getCategory().getName(),book.getAuthor().getName(),book.getProductImages());
+        return new BookDTO(book.getBookId(), book.getBookName(), book.getBookDescribe(),book.getCategory().getName(),book.getAuthor().getName(),book.getImage(),book.getUserCreate(),book.getCreatedAt(),book.getListComment());
     }
 }
