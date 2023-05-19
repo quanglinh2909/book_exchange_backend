@@ -2,6 +2,7 @@ package com.erp.backend.services;
 
 import com.erp.backend.dtos.UserDto;
 import com.erp.backend.dtos.mappers.UserDTOMapper;
+import com.erp.backend.entities.Book;
 import com.erp.backend.entities.User;
 import com.erp.backend.enums.Role;
 import com.erp.backend.repositories.UserRepository;
@@ -28,7 +29,10 @@ public class UserService implements IUserService {
     public User getProfile(String email) {
         return userRepository.findByEmail(email).orElse(null);
     }
-
+    public List<Book> getFollows(String email){
+        User user=userRepository.findByEmail(email).get();
+        return user.getFollows();
+    }
     public UserDto getUserById(Long id) {
         return userRepository.findById(id).map(userDTOMapper::apply).orElse(null);
     }

@@ -1,6 +1,10 @@
 package com.erp.backend.entities;
 
 import com.erp.backend.entities.base.AuditableBase;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -42,7 +46,7 @@ public class Book extends AuditableBase {
     @OneToMany(fetch = FetchType.LAZY)
     private List<Comment> listComment;
     @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private User userCreate;
-
 
 }
